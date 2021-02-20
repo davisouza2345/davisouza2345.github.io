@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito',sans-serif;
+}
+
+/* root ============== */
+:root{
+    --green: #38b425;
+    --light-green : #37d61f;
+    --red: #e92929;
+}
+body{
+    background: #DEDBD8;
+}
+html{
+    font-size: 93.75%;
+}
+header{
+    background: #2D64A5;
+    text-align: center;
+    align-items: top;
+    padding: 2rem 0px 8rem ;
+}
+
+header img{
+    display:block;
+    width: 120px;
+    margin: auto;
+}
+
+.container{
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/* titles===============================+ */
+h2{
+    font-weight: normal;
+    margin-top: 3.2rem;
+    margin-bottom: 0.8rem;
+}
+#balance{
+    margin-top: -5rem;
+
+}
+.sr-only{
+    position: absolute;
+    width: 1;
+    height: 1;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#balance h2{
+    color: #fff;
+    text-align: left;
+}
+
+/* cards================================= */
+
+.card{
+    background: #ffff;
+    margin-bottom: 2rem;
+    padding: 2rem 1.2rem;
+    box-shadow:0px 8px 9px #00000033, 0px 15px 22px #00000024,0px 6px 28px #0000001f;
+    border-radius: 0.25rem;
+}
+.card h3{
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.card p{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.card.green{
+    color: #ffff;
+    background: var(--green);
+    border: 1px solid #24ff00bf;
+}
+
+
+/* links & buttons================================= */
+a{
+    color: var(--green);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--light-green);
+}
+
+button{
+    width: 100%;
+    height: 50px;
+
+    color: white;
+
+    border: none;
+    border-radius: .25rem;
+
+    background: var(--green);
+
+    cursor: pointer;
+}
+
+button:hover{
+    background: var(--light-green);;
+
+}
+
+
+.button.cancel{
+    color: var(--red);
+    border: 2px var(--red) solid;
+    
+    height: 50px;
+
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0.6;
+}
+
+.button.cancel:hover{
+    opacity: 1;
+}
+
+.button.new{
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* table================================= */
+
+#transaction{
+    display: block;
+    overflow-x: auto;
+}
+
+#data-table{
+    width: 100%;
+    border-spacing: 0 0.8rem;
+    font-size: 1rem;
+}
+.removeIcon img{
+    width: 25px;
+    height: 25px;
+}
+
+table th,
+table td{
+    font-weight: 400;
+    padding:   0.8rem;
+    text-align: left;
+
+}
+
+table tbody,
+table thead{
+    background: #fff;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius:  0 0.25rem 0.25rem 0;
+}
+
+tr{
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12);
+    opacity: 0.6;
+}
+
+tr:hover{
+    opacity: 1;
+}
+
+.income{
+    color: green;
+}
+
+.expense{
+    color: var(--red);
+}
+
+
+/* modal ============================ */
+.modal-overlay{
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0, 0.7);
+    position: fixed;
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    background: #dddddd;
+    padding: 2.4rem;
+    box-shadow:0px 8px 9px #00000033, 0px 15px 22px #00000024,0px 6px 28px #0000001f;
+    width: 90%;
+    max-width: 500px;
+}
+
+
+/* FORM=============== */
+
+#form{
+    max-width: 500px;
+}
+
+#form h2{
+    margin-top: 0;
+}
+
+input{
+    width: 100%;
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+
+}
+
+.input-group{
+    margin-top: 0.8rem;
+}
+
+small{
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-group.actions .button,
+.input-group.actions button{
+    width: 48%;
+}
+
+
+
+
+/* footer===============================  */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+footer p{
+    color: purple;
+    font-size: 1.2rem;
+}
+
+footer img{
+    width: 100px;
+}
+
+@media(min-width:770px){
+    html{
+        font-size: 87.5%;
+    }
+    header img{
+        width: 150px;
+    }
+    #balance{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        gap: 20px;
+
+    }
+
+    #data-table{
+        font-size: 1rem;
+    }
+    table td, table th{
+        text-align: left;
+        padding: 1.2rem;
+    }
+
+
+}
